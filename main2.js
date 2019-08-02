@@ -3,17 +3,17 @@ function createNewTodoElem() {
     //create DOM element: li
     let newElem1 = document.createElement('li');
     //change new li node to have innerHTML of the text input from the form
-    let testElem = document.querySelectorAll('li');
-    console.log(testElem)
 
-    // console.log(testElem.childNodes.wholeText)
+    let newSpan = document.createElement('span')
+    newSpan.textContent = document.querySelector('#newItemText').value;
+    newSpan.addEventListener('click', getInputFromUser)
 
-    newElem1.innerHTML = document.querySelector('#newItemText').value;
+    newElem1.appendChild(newSpan)
     // create button as child of li and append
     newElem1.appendChild(createNewButton())
     //append complete aButton
     newElem1.appendChild(createCompleteButton())
-    newElem1.addEventListener('click', getInputFromUser)
+
     //return new Item
     return newElem1;
 }
@@ -49,22 +49,13 @@ function createCompleteButton() {
   return newComplete
 }
 
-//create function that strikes through li.innerHTML
+
+//create function that strikes through li.span.innerHTML
 function strikeThrough () {
-  event.target.parentElement.style.textDecoration = 'line-through'
+  event.target.parentElement.querySelector('span').style.textDecoration = 'line-through'
 }
-// TO DO :::::
-// create click event for li node to edit text
-// listen for click on li
 
-// on click prompt user for input
-
-// take input store into li.innerText
-//
-// function listenForClick(listItem) {
-//     listItem.addEventListener('click', getInputFromUser)
-// }
-
+//gets input from user
 function getInputFromUser() {
-  return window.prompt('Change todo item: ')
+  event.target.innerText = window.prompt('Change todo item: ')
 }

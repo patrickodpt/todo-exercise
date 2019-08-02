@@ -27,8 +27,16 @@ ul {
   list-style: none;
 }
 
-li {
-  background-color: blue;
+#todoList li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex: 1 2em;
+  list-style: none;
+  padding: 0.25em;
+  margin: 0.5em 1em;
+  border-radius: 0.25em;
+  background-color: black;
 }
 
 /* #todoList {
