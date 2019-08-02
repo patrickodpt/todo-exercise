@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.background {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+}
+
+.cnt1 {
+  color: white;
+  text-align: center;
+  background-image: url("vaporwave.png");
+  height: 800px;
+  width: 800px;
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background-color: blue;
+}
+
+/* #todoList {
+  background-color: green;
+  margin: 5px auto;
+}
+
+#todoList li {
+  display: block;
+  background-color: white;
+} */
