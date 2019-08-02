@@ -49,7 +49,6 @@ function createCompleteButton() {
   return newComplete
 }
 
-
 //create function that strikes through li.span.innerHTML
 function strikeThrough () {
   event.target.parentElement.querySelector('span').style.textDecoration = 'line-through'
